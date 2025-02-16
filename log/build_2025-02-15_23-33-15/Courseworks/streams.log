@@ -1,0 +1,34 @@
+[0.786s] Invoking command in '/home/uli/Desktop/tec/6to/ros2_env/src/Courseworks': PYTHONPATH=/home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/Courseworks build --build-base /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build install --record /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/install.log --single-version-externally-managed install_data
+[1.072s] running egg_info
+[1.072s] creating ../../build/Courseworks/Courseworks.egg-info
+[1.072s] writing ../../build/Courseworks/Courseworks.egg-info/PKG-INFO
+[1.072s] writing dependency_links to ../../build/Courseworks/Courseworks.egg-info/dependency_links.txt
+[1.072s] writing entry points to ../../build/Courseworks/Courseworks.egg-info/entry_points.txt
+[1.073s] writing requirements to ../../build/Courseworks/Courseworks.egg-info/requires.txt
+[1.073s] writing top-level names to ../../build/Courseworks/Courseworks.egg-info/top_level.txt
+[1.073s] writing manifest file '../../build/Courseworks/Courseworks.egg-info/SOURCES.txt'
+[1.075s] reading manifest file '../../build/Courseworks/Courseworks.egg-info/SOURCES.txt'
+[1.076s] writing manifest file '../../build/Courseworks/Courseworks.egg-info/SOURCES.txt'
+[1.076s] running build
+[1.076s] running build_py
+[1.076s] creating /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build
+[1.076s] creating /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build/lib
+[1.076s] creating /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build/lib/hw1
+[1.076s] copying hw1/subscriber.py -> /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build/lib/hw1
+[1.076s] copying hw1/__init__.py -> /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build/lib/hw1
+[1.076s] copying hw1/publisher.py -> /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build/lib/hw1
+[1.076s] running install
+[1.077s] running install_lib
+[1.077s] creating /home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/lib/python3.10/site-packages/hw1
+[1.077s] copying /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build/lib/hw1/subscriber.py -> /home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/lib/python3.10/site-packages/hw1
+[1.078s] copying /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build/lib/hw1/__init__.py -> /home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/lib/python3.10/site-packages/hw1
+[1.078s] copying /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build/lib/hw1/publisher.py -> /home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/lib/python3.10/site-packages/hw1
+[1.078s] byte-compiling /home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/lib/python3.10/site-packages/hw1/subscriber.py to subscriber.cpython-310.pyc
+[1.078s] byte-compiling /home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/lib/python3.10/site-packages/hw1/__init__.py to __init__.cpython-310.pyc
+[1.079s] byte-compiling /home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/lib/python3.10/site-packages/hw1/publisher.py to publisher.cpython-310.pyc
+[1.079s] running install_data
+[1.079s] creating /home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/share/ament_index
+[1.079s] creating /home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/share/ament_index/resource_index
+[1.079s] creating /home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/share/ament_index/resource_index/packages
+[1.079s] error: can't copy 'resource/Courseworks': doesn't exist or not a regular file
+[1.099s] Invoked command in '/home/uli/Desktop/tec/6to/ros2_env/src/Courseworks' returned '1': PYTHONPATH=/home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/uli/Desktop/tec/6to/ros2_env/install/Courseworks/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/Courseworks build --build-base /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/build install --record /home/uli/Desktop/tec/6to/ros2_env/build/Courseworks/install.log --single-version-externally-managed install_data

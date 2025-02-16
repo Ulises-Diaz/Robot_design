@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'hw1'
+package_name = 'courseworks'
 
 setup(
     name=package_name,
