@@ -1,0 +1,38 @@
+[0.970s] Invoking command in '/home/uli/Desktop/tec/6to/ros2_env/src/my_package': PYTHONPATH=/home/uli/Desktop/tec/6to/ros2_env/build/my_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/uli/Desktop/tec/6to/ros2_env/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_package build --build-base /home/uli/Desktop/tec/6to/ros2_env/build/my_package/build install --record /home/uli/Desktop/tec/6to/ros2_env/build/my_package/install.log --single-version-externally-managed install_data
+[1.290s] running egg_info
+[1.291s] creating ../../build/my_package/my_package.egg-info
+[1.291s] writing ../../build/my_package/my_package.egg-info/PKG-INFO
+[1.291s] writing dependency_links to ../../build/my_package/my_package.egg-info/dependency_links.txt
+[1.291s] writing entry points to ../../build/my_package/my_package.egg-info/entry_points.txt
+[1.291s] writing requirements to ../../build/my_package/my_package.egg-info/requires.txt
+[1.291s] writing top-level names to ../../build/my_package/my_package.egg-info/top_level.txt
+[1.291s] writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[1.293s] reading manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[1.293s] adding license file 'LICENSE'
+[1.294s] writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[1.294s] running build
+[1.294s] running build_py
+[1.294s] creating /home/uli/Desktop/tec/6to/ros2_env/build/my_package/build
+[1.294s] creating /home/uli/Desktop/tec/6to/ros2_env/build/my_package/build/lib
+[1.294s] creating /home/uli/Desktop/tec/6to/ros2_env/build/my_package/build/lib/my_package
+[1.295s] copying my_package/my_node.py -> /home/uli/Desktop/tec/6to/ros2_env/build/my_package/build/lib/my_package
+[1.295s] copying my_package/__init__.py -> /home/uli/Desktop/tec/6to/ros2_env/build/my_package/build/lib/my_package
+[1.295s] running install
+[1.295s] running install_lib
+[1.297s] creating /home/uli/Desktop/tec/6to/ros2_env/install/my_package/lib/python3.10/site-packages/my_package
+[1.297s] copying /home/uli/Desktop/tec/6to/ros2_env/build/my_package/build/lib/my_package/my_node.py -> /home/uli/Desktop/tec/6to/ros2_env/install/my_package/lib/python3.10/site-packages/my_package
+[1.297s] copying /home/uli/Desktop/tec/6to/ros2_env/build/my_package/build/lib/my_package/__init__.py -> /home/uli/Desktop/tec/6to/ros2_env/install/my_package/lib/python3.10/site-packages/my_package
+[1.297s] byte-compiling /home/uli/Desktop/tec/6to/ros2_env/install/my_package/lib/python3.10/site-packages/my_package/my_node.py to my_node.cpython-310.pyc
+[1.297s] byte-compiling /home/uli/Desktop/tec/6to/ros2_env/install/my_package/lib/python3.10/site-packages/my_package/__init__.py to __init__.cpython-310.pyc
+[1.297s] running install_data
+[1.298s] creating /home/uli/Desktop/tec/6to/ros2_env/install/my_package/share/ament_index
+[1.298s] creating /home/uli/Desktop/tec/6to/ros2_env/install/my_package/share/ament_index/resource_index
+[1.298s] creating /home/uli/Desktop/tec/6to/ros2_env/install/my_package/share/ament_index/resource_index/packages
+[1.298s] copying resource/my_package -> /home/uli/Desktop/tec/6to/ros2_env/install/my_package/share/ament_index/resource_index/packages
+[1.298s] copying package.xml -> /home/uli/Desktop/tec/6to/ros2_env/install/my_package/share/my_package
+[1.298s] running install_egg_info
+[1.301s] Copying ../../build/my_package/my_package.egg-info to /home/uli/Desktop/tec/6to/ros2_env/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info
+[1.302s] running install_scripts
+[1.325s] Installing my_node script to /home/uli/Desktop/tec/6to/ros2_env/install/my_package/lib/my_package
+[1.325s] writing list of installed files to '/home/uli/Desktop/tec/6to/ros2_env/build/my_package/install.log'
+[1.375s] Invoked command in '/home/uli/Desktop/tec/6to/ros2_env/src/my_package' returned '0': PYTHONPATH=/home/uli/Desktop/tec/6to/ros2_env/build/my_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/uli/Desktop/tec/6to/ros2_env/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_package build --build-base /home/uli/Desktop/tec/6to/ros2_env/build/my_package/build install --record /home/uli/Desktop/tec/6to/ros2_env/build/my_package/install.log --single-version-externally-managed install_data
