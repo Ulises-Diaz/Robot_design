@@ -1,8 +1,0 @@
-/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim/rosidl_adapter/turtlesim:action/RotateAbsolute.idl
-/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim/rosidl_adapter/turtlesim:msg/Color.idl
-/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim/rosidl_adapter/turtlesim:msg/Pose.idl
-/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim/rosidl_adapter/turtlesim:srv/Kill.idl
-/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim/rosidl_adapter/turtlesim:srv/SetPen.idl
-/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim/rosidl_adapter/turtlesim:srv/Spawn.idl
-/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim/rosidl_adapter/turtlesim:srv/TeleportAbsolute.idl
-/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim/rosidl_adapter/turtlesim:srv/TeleportRelative.idl

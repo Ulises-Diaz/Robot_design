@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+from glob import glob
+import os
 
 package_name = 'courseworks'
 
@@ -10,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        # Agrega esta línea para incluir el archivo launcher.py
+        ('share/' + package_name + '/launch', glob(os.path.join('launch', 'launcher.py')))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,8 +24,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        'publisher = courseworks.publisher:main',  
-        'subscriber = courseworks.subscriber:main',   
+            'publisher = courseworks.publisher:main',  
+            'subscriber = courseworks.subscriber:main',   
         ],
     },
 )

@@ -1,4 +1,0 @@
-Invoking command in '/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /home/uli/.local/bin/cmake --build /home/uli/Desktop/tec/6to/ros2_env/build/turtlesim -- -j8 -l8
-Invoked command in '/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/uli/.local/bin/cmake --build /home/uli/Desktop/tec/6to/ros2_env/build/turtlesim -- -j8 -l8
-Invoking command in '/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /home/uli/.local/bin/cmake --install /home/uli/Desktop/tec/6to/ros2_env/build/turtlesim
-Invoked command in '/home/uli/Desktop/tec/6to/ros2_env/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/uli/.local/bin/cmake --install /home/uli/Desktop/tec/6to/ros2_env/build/turtlesim

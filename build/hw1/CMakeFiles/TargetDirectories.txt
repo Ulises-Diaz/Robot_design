@@ -1,9 +1,0 @@
-/home/uli/Desktop/tec/6to/ros2_env/build/hw1/CMakeFiles/uninstall.dir
-/home/uli/Desktop/tec/6to/ros2_env/build/hw1/CMakeFiles/hw1_uninstall.dir
-/home/uli/Desktop/tec/6to/ros2_env/build/hw1/CMakeFiles/test.dir
-/home/uli/Desktop/tec/6to/ros2_env/build/hw1/CMakeFiles/edit_cache.dir
-/home/uli/Desktop/tec/6to/ros2_env/build/hw1/CMakeFiles/rebuild_cache.dir
-/home/uli/Desktop/tec/6to/ros2_env/build/hw1/CMakeFiles/list_install_components.dir
-/home/uli/Desktop/tec/6to/ros2_env/build/hw1/CMakeFiles/install.dir
-/home/uli/Desktop/tec/6to/ros2_env/build/hw1/CMakeFiles/install/local.dir
-/home/uli/Desktop/tec/6to/ros2_env/build/hw1/CMakeFiles/install/strip.dir
