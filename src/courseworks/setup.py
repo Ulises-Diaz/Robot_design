@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        'publisher = hw1.publisher:main',  
-        'subscriber = hw1.subscriber:main',   
+        'publisher = courseworks.publisher:main',  
+        'subscriber = courseworks.subscriber:main',   
         ],
     },
 )

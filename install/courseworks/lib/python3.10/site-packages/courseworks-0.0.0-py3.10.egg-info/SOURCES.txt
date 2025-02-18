@@ -9,6 +9,7 @@ setup.py
 ../../build/courseworks/courseworks.egg-info/top_level.txt
 ../../build/courseworks/courseworks.egg-info/zip-safe
 courseworks/__init__.py
+courseworks/grafica.py
 courseworks/publisher.py
 courseworks/subscriber.py
 resource/courseworks
