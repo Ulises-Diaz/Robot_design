@@ -157,38 +157,38 @@ def init_wheel_l() :
 
 def init_chassis() : 
     # Header
-    wheel_l.header.frame_id = "chassis" # nombre del fixed frame
-    wheel_l.header.stamp = rospy.Time.now() 
+    chassis.header.frame_id = "chassis" # nombre del fixed frame
+    chassis.header.stamp = rospy.Time.now() 
 
     # Set shape 
-    wheel_l.id = 3
-    wheel_l.type = 1
+    chassis.id = 3
+    chassis.type = 1
     # Add Marker 
-    wheel_l.action = 0 
+    chassis.action = 0 
     
     # Set pos Marker
-    wheel_l.pose.position.x = 9.0
-    wheel_l.pose.position.y = 1.0
-    wheel_l.pose.position.z = 0.4
-    wheel_l.pose.orientation.x = 0.0
-    wheel_l.pose.orientation.y = 0.0
-    wheel_l.pose.orientation.z = 0.0
-    wheel_l.pose.orientation.w = 1.0
+    chassis.pose.position.x = 9.0
+    chassis.pose.position.y = 1.0
+    chassis.pose.position.z = 0.4
+    chassis.pose.orientation.x = 0.0
+    chassis.pose.orientation.y = 0.0
+    chassis.pose.orientation.z = 0.0
+    chassis.pose.orientation.w = 1.0
 
     # Set the scale of the marker 
     # Change dimensions 
-    wheel_l.scale.x = 0.5
-    wheel_l.scale.y = 0.5
-    wheel_l.scale.z = 0.5 
+    chassis.scale.x = 0.5
+    chassis.scale.y = 0.5
+    chassis.scale.z = 0.5 
 
     # Set the color
-    wheel_l.color.r = 1.0
-    wheel_l.color.g = 1.0
-    wheel_l.color.b = 0.0
-    wheel_l.color.a = 1.0
+    chassis.color.r = 1.0
+    chassis.color.g = 1.0
+    chassis.color.b = 0.0
+    chassis.color.a = 1.0
 
     # Set Duration
-    wheel_l.lifetime = rospy.Duration (0)
+    chassis.lifetime = rospy.Duration (0)
 
 
     # Stop Condition 
