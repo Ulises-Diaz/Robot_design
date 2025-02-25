@@ -1,0 +1,7 @@
+<launch>
+    <!-- Iniciar RVIZ con una configuración específica -->
+    <node name="rviz" pkg="rviz" type="rviz" output="screen"/>
+
+    <!-- Iniciar tu nodo -->
+    <node name="car" pkg="simple_mobile_robot" type="car.py" output="screen"/>
+</launch>

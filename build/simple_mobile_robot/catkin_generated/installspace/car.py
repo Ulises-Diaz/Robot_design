@@ -97,14 +97,14 @@ def init_caster_wheel():
 
     # Set the scale of the marker 
     # Change dimensions 
-    caster_wheel_marker.scale.x = 0.2
-    caster_wheel_marker.scale.y = 0.2
-    caster_wheel_marker.scale.z = 0.2
+    caster_wheel_marker.scale.x = 0.15
+    caster_wheel_marker.scale.y = 0.15
+    caster_wheel_marker.scale.z = 0.15
 
     # Set the color
     caster_wheel_marker.color.r = 1.0
     caster_wheel_marker.color.g = 1.0
-    caster_wheel_marker.color.b = 0.0
+    caster_wheel_marker.color.b = 4.0
     caster_wheel_marker.color.a = 1.0
 
     # Set Duration
@@ -124,7 +124,7 @@ def init_wheel_r():
     # Set pos Marker
     wheel_r_marker.pose.position.x = 0.0
     wheel_r_marker.pose.position.y = 0.0
-    wheel_r_marker.pose.position.z = 0.4
+    wheel_r_marker.pose.position.z = 0.0
     wheel_r_marker.pose.orientation.x = 0.0
     wheel_r_marker.pose.orientation.y = 0.0
     wheel_r_marker.pose.orientation.z = 0.0
@@ -137,8 +137,8 @@ def init_wheel_r():
     wheel_r_marker.scale.z = 0.2 
 
     # Set the color
-    wheel_r_marker.color.r = 1.0
-    wheel_r_marker.color.g = 0.0
+    wheel_r_marker.color.r = 2.0
+    wheel_r_marker.color.g = 3.4
     wheel_r_marker.color.b = 0.0
     wheel_r_marker.color.a = 1.0
 
@@ -172,7 +172,7 @@ def init_wheel_l():
     wheel_l_marker.scale.z = 0.2 
 
     # Set the color
-    wheel_l_marker.color.r = 1.0
+    wheel_l_marker.color.r = 4.0
     wheel_l_marker.color.g = 1.0
     wheel_l_marker.color.b = 0.0
     wheel_l_marker.color.a = 1.0
@@ -207,9 +207,9 @@ def init_chassis():
     chassis_marker.scale.z = 0.4 
 
     # Set the color
-    chassis_marker.color.r = 1.0
-    chassis_marker.color.g = 1.0
-    chassis_marker.color.b = 0.0
+    chassis_marker.color.r = 0.0
+    chassis_marker.color.g = 3.0
+    chassis_marker.color.b = 1.0
     chassis_marker.color.a = 1.0
 
     # Set Duration
@@ -243,8 +243,8 @@ def init_base_link():
 
     # Set the color
     base_link_marker.color.r = 1.0
-    base_link_marker.color.g = 1.0
-    base_link_marker.color.b = 0.0
+    base_link_marker.color.g = 0.0
+    base_link_marker.color.b = 1.0
     base_link_marker.color.a = 1.0
 
     # Set Duration
@@ -290,7 +290,7 @@ def init_wheel_l_tf():
     wheel_l_tf.header.stamp = rospy.Time.now()
     wheel_l_tf.transform.translation.x = 0.1
     wheel_l_tf.transform.translation.y = 0.2
-    wheel_l_tf.transform.translation.z = 0.0
+    wheel_l_tf.transform.translation.z = -0.2
     wheel_l_tf.transform.rotation.x = 0.0
     wheel_l_tf.transform.rotation.y = 0.0
     wheel_l_tf.transform.rotation.z = 0.0
@@ -303,7 +303,7 @@ def init_wheel_r_tf():
     wheel_r_tf.header.stamp = rospy.Time.now()
     wheel_r_tf.transform.translation.x = 0.1
     wheel_r_tf.transform.translation.y = -0.2
-    wheel_r_tf.transform.translation.z = 0.0
+    wheel_r_tf.transform.translation.z = -0.2
     wheel_r_tf.transform.rotation.x = 0.0
     wheel_r_tf.transform.rotation.y = 0.0
     wheel_r_tf.transform.rotation.z = 0.0
@@ -314,9 +314,9 @@ def init_caster_wheel_tf():
     caster_wheel_tf.header.frame_id = 'chassis'
     caster_wheel_tf.child_frame_id = 'caster_wheel'
     caster_wheel_tf.header.stamp = rospy.Time.now()
-    caster_wheel_tf.transform.translation.x = -0.3
+    caster_wheel_tf.transform.translation.x = -0.1
     caster_wheel_tf.transform.translation.y = 0.0
-    caster_wheel_tf.transform.translation.z = -0.2
+    caster_wheel_tf.transform.translation.z = -0.225
     caster_wheel_tf.transform.rotation.x = 0.0
     caster_wheel_tf.transform.rotation.y = 0.0
     caster_wheel_tf.transform.rotation.z = 0.0
@@ -353,8 +353,8 @@ if __name__ == "__main__":
 
     # Set movement of the car
     speed = 1
-    radius = 3
-    length_axis = 1
+    radius = 2
+    length_axis = 0.6
 
     # Set publishers and subscribers Markers
     pub_caster = rospy.Publisher('/caster_wheel', Marker, queue_size=1)
