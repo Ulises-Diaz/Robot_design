@@ -7,5 +7,7 @@
 subdirs("gtest")
 subdirs("basic_comms")
 subdirs("courseworks")
+subdirs("dashgo_b1")
 subdirs("makers")
+subdirs("motor_sim")
 subdirs("simple_mobile_robot")

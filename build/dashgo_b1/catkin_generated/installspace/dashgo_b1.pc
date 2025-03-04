@@ -1,0 +1,8 @@
+prefix=/home/student/catkin_ws/install
+
+Name: dashgo_b1
+Description: Description of dashgo_b1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

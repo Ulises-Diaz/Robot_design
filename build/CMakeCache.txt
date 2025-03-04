@@ -796,6 +796,12 @@ courseworks_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/courseworks
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
+//Value Computed by CMake
+dashgo_b1_BINARY_DIR:STATIC=/home/student/catkin_ws/build/dashgo_b1
+
+//Value Computed by CMake
+dashgo_b1_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/dashgo_b1
+
 //The directory containing a CMake configuration file for gazebo.
 gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
 
@@ -916,6 +922,12 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
+
+//Value Computed by CMake
+motor_sim_BINARY_DIR:STATIC=/home/student/catkin_ws/build/motor_sim
+
+//Value Computed by CMake
+motor_sim_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/motor_sim
 
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/noetic/share/nav_msgs/cmake
@@ -1255,7 +1267,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

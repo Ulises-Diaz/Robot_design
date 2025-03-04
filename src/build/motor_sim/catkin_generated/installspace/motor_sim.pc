@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: motor_sim
+Description: Description of motor_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
