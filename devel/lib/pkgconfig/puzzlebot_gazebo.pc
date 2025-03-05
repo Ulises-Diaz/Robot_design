@@ -2,7 +2,7 @@ prefix=/home/student/catkin_ws/devel
 
 Name: puzzlebot_gazebo
 Description: Description of puzzlebot_gazebo
-Version: 0.0.1
+Version: 1.1.0
 Cflags: 
 Libs: -L${prefix}/lib 
 Requires: 

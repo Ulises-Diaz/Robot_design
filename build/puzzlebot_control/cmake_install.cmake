@@ -52,3 +52,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/puzzlebot_control" TYPE FILE FILES "/home/student/catkin_ws/src/puzzlebot_control/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/puzzlebot_control" TYPE PROGRAM FILES "/home/student/catkin_ws/build/puzzlebot_control/catkin_generated/installspace/wheel_vel.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/puzzlebot_control" TYPE PROGRAM FILES "/home/student/catkin_ws/build/puzzlebot_control/catkin_generated/installspace/localisation.py")
+endif()
+

@@ -1,2 +1,2 @@
-basic_comms:courseworks:dashgo_b1:makers:motor_sim:simple_mobile_robot
+basic_comms:courseworks:dashgo_b1:makers:motor_sim:puzzlebot_control:puzzlebot_description:puzzlebot_gazebo:simple_mobile_robot
 -DCATKIN_DEVEL_PREFIX=/home/student/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/student/catkin_ws/install -G Unix Makefiles

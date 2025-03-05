@@ -137,6 +137,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/student/catkin_ws/src/build/makers/cmake_install.cmake")
   include("/home/student/catkin_ws/src/build/motor_sim/cmake_install.cmake")
   include("/home/student/catkin_ws/src/build/simple_mobile_robot/cmake_install.cmake")
+  include("/home/student/catkin_ws/src/build/puzzlebot_gazebo/cmake_install.cmake")
+  include("/home/student/catkin_ws/src/build/puzzlebot_description/cmake_install.cmake")
+  include("/home/student/catkin_ws/src/build/puzzlebot_control/cmake_install.cmake")
 
 endif()
 

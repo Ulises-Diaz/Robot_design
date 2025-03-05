@@ -390,6 +390,21 @@ basic_comms_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/basic_comms
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 
+//The directory containing a CMake configuration file for class_loader.
+class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
+
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/opt/ros/noetic/share/control_msgs/cmake
+
+//The directory containing a CMake configuration file for controller_interface.
+controller_interface_DIR:PATH=/opt/ros/noetic/share/controller_interface/cmake
+
+//The directory containing a CMake configuration file for controller_manager.
+controller_manager_DIR:PATH=/opt/ros/noetic/share/controller_manager/cmake
+
+//The directory containing a CMake configuration file for controller_manager_msgs.
+controller_manager_msgs_DIR:PATH=/opt/ros/noetic/share/controller_manager_msgs/cmake
+
 //Value Computed by CMake
 courseworks_BINARY_DIR:STATIC=/home/student/catkin_ws/src/build/courseworks
 
@@ -404,6 +419,18 @@ dashgo_b1_BINARY_DIR:STATIC=/home/student/catkin_ws/src/build/dashgo_b1
 
 //Value Computed by CMake
 dashgo_b1_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/dashgo_b1
+
+//The directory containing a CMake configuration file for diff_drive_controller.
+diff_drive_controller_DIR:PATH=/opt/ros/noetic/share/diff_drive_controller/cmake
+
+//The directory containing a CMake configuration file for dynamic_reconfigure.
+dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
+
+//The directory containing a CMake configuration file for gazebo_msgs.
+gazebo_msgs_DIR:PATH=/opt/ros/noetic/share/gazebo_msgs/cmake
+
+//The directory containing a CMake configuration file for gazebo_ros.
+gazebo_ros_DIR:PATH=/opt/ros/noetic/share/gazebo_ros/cmake
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/noetic/share/gencpp/cmake
@@ -472,17 +499,41 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//The directory containing a CMake configuration file for hardware_interface.
+hardware_interface_DIR:PATH=/opt/ros/noetic/share/hardware_interface/cmake
+
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
+
+//The directory containing a CMake configuration file for interactive_markers.
+interactive_markers_DIR:PATH=/opt/ros/noetic/share/interactive_markers/cmake
+
+//The directory containing a CMake configuration file for joint_state_publisher.
+joint_state_publisher_DIR:PATH=/opt/ros/noetic/share/joint_state_publisher/cmake
+
+//The directory containing a CMake configuration file for joint_state_publisher_gui.
+joint_state_publisher_gui_DIR:PATH=/opt/ros/noetic/share/joint_state_publisher_gui/cmake
+
 //The directory containing a CMake configuration file for kdl_conversions.
 kdl_conversions_DIR:PATH=/opt/ros/noetic/share/kdl_conversions/cmake
 
+//The directory containing a CMake configuration file for kdl_parser.
+kdl_parser_DIR:PATH=/opt/ros/noetic/share/kdl_parser/cmake
+
+//The directory containing a CMake configuration file for laser_geometry.
+laser_geometry_DIR:PATH=/opt/ros/noetic/share/laser_geometry/cmake
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/libtf.so
+lib:FILEPATH=/opt/ros/noetic/lib/libtransmission_interface_loader_plugins.so
 
 //Value Computed by CMake
 makers_BINARY_DIR:STATIC=/home/student/catkin_ws/src/build/makers
 
 //Value Computed by CMake
 makers_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/makers
+
+//The directory containing a CMake configuration file for map_msgs.
+map_msgs_DIR:PATH=/opt/ros/noetic/share/map_msgs/cmake
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/noetic/share/message_filters/cmake
@@ -502,8 +553,41 @@ motor_sim_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/motor_sim
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/noetic/share/nav_msgs/cmake
 
+//The directory containing a CMake configuration file for pluginlib.
+pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
+
+//Value Computed by CMake
+puzzlebot_control_BINARY_DIR:STATIC=/home/student/catkin_ws/src/build/puzzlebot_control
+
+//Value Computed by CMake
+puzzlebot_control_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/puzzlebot_control
+
+//Value Computed by CMake
+puzzlebot_description_BINARY_DIR:STATIC=/home/student/catkin_ws/src/build/puzzlebot_description
+
+//Value Computed by CMake
+puzzlebot_description_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/puzzlebot_description
+
+//Value Computed by CMake
+puzzlebot_gazebo_BINARY_DIR:STATIC=/home/student/catkin_ws/src/build/puzzlebot_gazebo
+
+//Value Computed by CMake
+puzzlebot_gazebo_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/puzzlebot_gazebo
+
+//The directory containing a CMake configuration file for realtime_tools.
+realtime_tools_DIR:PATH=/opt/ros/noetic/share/realtime_tools/cmake
+
+//The directory containing a CMake configuration file for resource_retriever.
+resource_retriever_DIR:PATH=/opt/ros/noetic/share/resource_retriever/cmake
+
+//The directory containing a CMake configuration file for robot_state_publisher.
+robot_state_publisher_DIR:PATH=/opt/ros/noetic/share/robot_state_publisher/cmake
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for rosconsole_bridge.
+rosconsole_bridge_DIR:PATH=/opt/ros/noetic/share/rosconsole_bridge/cmake
 
 //The directory containing a CMake configuration file for roscpp.
 roscpp_DIR:PATH=/opt/ros/noetic/share/roscpp/cmake
@@ -520,11 +604,20 @@ rosgraph_DIR:PATH=/opt/ros/noetic/share/rosgraph/cmake
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/noetic/share/rosgraph_msgs/cmake
 
+//The directory containing a CMake configuration file for roslib.
+roslib_DIR:PATH=/opt/ros/noetic/share/roslib/cmake
+
+//The directory containing a CMake configuration file for rospack.
+rospack_DIR:PATH=/opt/ros/noetic/share/rospack/cmake
+
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
+
+//The directory containing a CMake configuration file for rviz.
+rviz_DIR:PATH=/opt/ros/noetic/share/rviz/cmake
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
@@ -538,8 +631,14 @@ simple_mobile_robot_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/simple_mobile_
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
 
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/opt/ros/noetic/share/std_srvs/cmake
+
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/noetic/share/tf2/cmake
+
+//The directory containing a CMake configuration file for tf2_kdl.
+tf2_kdl_DIR:PATH=/opt/ros/noetic/share/tf2_kdl/cmake
 
 //The directory containing a CMake configuration file for tf2_msgs.
 tf2_msgs_DIR:PATH=/opt/ros/noetic/share/tf2_msgs/cmake
@@ -555,6 +654,15 @@ tf_DIR:PATH=/opt/ros/noetic/share/tf/cmake
 
 //The directory containing a CMake configuration file for tf_conversions.
 tf_conversions_DIR:PATH=/opt/ros/noetic/share/tf_conversions/cmake
+
+//The directory containing a CMake configuration file for trajectory_msgs.
+trajectory_msgs_DIR:PATH=/opt/ros/noetic/share/trajectory_msgs/cmake
+
+//The directory containing a CMake configuration file for transmission_interface.
+transmission_interface_DIR:PATH=/opt/ros/noetic/share/transmission_interface/cmake
+
+//The directory containing a CMake configuration file for urdf.
+urdf_DIR:PATH=/opt/ros/noetic/share/urdf/cmake
 
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/noetic/share/visualization_msgs/cmake
@@ -710,7 +818,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
