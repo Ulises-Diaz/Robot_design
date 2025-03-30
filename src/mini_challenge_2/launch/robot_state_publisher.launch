@@ -1,0 +1,32 @@
+<launch>
+  <!-- Cargar el URDF en el parámetro /robot_description -->
+  <param name="robot_description" textfile="$(find mini_challenge_2)/urdf/dc_motor.urdf" />
+
+  <!-- ========== Nodos para simulación y control ========== -->
+  <!-- Simulación del motor -->
+  <node name="moto_sim" pkg="mini_challenge_2" type="moto_sim.py" output="screen" />
+
+  <!-- Publicador del estado del joint (motor) -->
+  <node name="motor_JointPub" pkg="mini_challenge_2" type="motor_JointPub.py" output="screen">
+    <remap from="joint_states" to="/joint_states"/> <!-- Publica en /joint_states -->
+  </node>
+
+  <!-- Control PID -->
+  <node name="pid_control" pkg="mini_challenge_2" type="pid_control.py" output="screen" />
+
+  <!-- Generador de setpoints (consignas) -->
+  <node name="set_point_generator" pkg="mini_challenge_2" type="set_point_generator.py" output="screen" />
+
+  <!-- ========== Nodos para TF y robot_states ========== -->
+  <!-- Convertir joint_states a TF2 (transformaciones) y publicar estados del robot -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+    <param name="publish_frequency" value="50"/>
+    <remap from="joint_states" to="/joint_states"/> <!-- Se suscribe a /joint_states -->
+    <remap from="tf" to="/tf"/> <!-- Publica transformaciones en /tf -->
+    <!-- Publica el estado completo del robot en /robot_states -->
+    <remap from="robot_description" to="/robot_description"/>
+  </node>
+
+  <!-- Visualización en RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mini_challenge_2)/config/urdf.rviz" required="true" />
+</launch>

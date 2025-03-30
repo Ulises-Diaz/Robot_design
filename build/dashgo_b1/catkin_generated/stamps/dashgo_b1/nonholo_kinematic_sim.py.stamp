@@ -21,9 +21,6 @@ last_time = 0.0
 pose_tf = TransformStamped()
 
 #Initialise messages (if required)
-motorInput = Float32()
-motorOutput_l = Float32()
-motorOutput_r = Float32()
 
 #Initialise TF's
 def init_poseTF(pos_x, pos_y, pos_th):
@@ -43,14 +40,13 @@ def init_poseTF(pos_x, pos_y, pos_th):
 #Define the callback functions (if required)
 def cmd_vel_callback(msg): 
     global velocity_r, velocity_l
-    # Convert Twist message to wheel velocities
     
-    # Assuming differential drive robot
-    linear_x = msg.linear.x  # Forward/backward velocity
-    angular_z = msg.angular.z  # Rotational velocity
+    # Convertir twist(vel) a msg llanta 
+    linear_x = msg.linear.x  
+    angular_z = msg.angular.z  
 
-    # Calculate wheel velocities based on robot kinematics
-    # This is a simple kinematic model for a differential drive robot
+    # Calc vel
+
     velocity_r = linear_x + (angular_z * wheel_base / 2.0)
     velocity_l = linear_x - (angular_z * wheel_base / 2.0)
 
@@ -67,7 +63,7 @@ if __name__=='__main__':
     #Set the parameters of the system
     sample_time = rospy.get_param('~motor_sample_time', 0.01)
 
-    # CAR PARAM
+    # CAR PARAM. Given
     wheel_radius = rospy.get_param('~radius', 0.062)
     wheel_base = rospy.get_param('~base', 0.33)
     
@@ -83,12 +79,15 @@ if __name__=='__main__':
     #Init messages to be used
     init_poseTF(pos_x, pos_y, pos_th)
 
+    ''' MIO '''
+
     # Setup the Subscribers
     rospy.Subscriber("/cmd_vel", Twist, cmd_vel_callback)
     
     #Setup de publishers
-    odom_pub = rospy.Publisher('/odom', Odometry, queue_size=10)
-    
+    odom_pub = rospy.Publisher('/odom', Odometry, queue_size = 10)
+
+    '''                        '''
     #Setup TF Broadcasters
     pose_tf_bc = TransformBroadcaster()
 
@@ -98,6 +97,9 @@ if __name__=='__main__':
     try:
     # Run the node
         while not rospy.is_shutdown():
+            
+
+            # para el time sampling
 
             if first:
                 start_time = rospy.get_time()
@@ -108,19 +110,19 @@ if __name__=='__main__':
                 current_time = rospy.get_time()
                 dt = current_time - last_time
 
-            # Eq Diff (Cálculo de la posición y orientación del robot)
+            # Eq Diff Calc robot con euler
                 if dt >= sample_time:
                     pos_x = pos_x + dt * (((velocity_r + velocity_l) / 2) * np.cos(pos_th))
                     pos_y = pos_y + dt * (((velocity_r + velocity_l) / 2) * np.sin(pos_th))
                     pos_th = pos_th + dt * ((velocity_r - velocity_l) / wheel_base)
 
-                # Actualizar valores anteriores
+                # Act tiempo para siguiente iteracion
                     last_time = current_time
 
-                # Convertir el ángulo a cuaternión para ROS
+                # Pasar angulo a Quat para ros
                     q_steering = tf_conversions.transformations.quaternion_from_euler(0, 0, pos_th)
 
-                # Llenar el mensaje de transformación (TF) del robot
+                # Tf msg carro
                     pose_tf.header.stamp = rospy.Time.now()
                     pose_tf.transform.translation.x = pos_x
                     pose_tf.transform.translation.y = pos_y
@@ -129,16 +131,18 @@ if __name__=='__main__':
                     pose_tf.transform.rotation.z = q_steering[2]
                     pose_tf.transform.rotation.w = q_steering[3]
 
-                # Broadcast TF
+                # Publicar tfs
                     pose_tf_bc.sendTransform(pose_tf)
 
-                # Crear y publicar mensaje de odometría
+                #  Msg odometria 
+
+                # ODOM : POSE, TWIST
                     odom_msg = Odometry()
                     odom_msg.header.stamp = rospy.Time.now()
                     odom_msg.header.frame_id = "odom"
                     odom_msg.child_frame_id = "base_link"
 
-                # Posición
+                # POS : Position,  Orientation
                     odom_msg.pose.pose.position.x = pos_x
                     odom_msg.pose.pose.position.y = pos_y
                     odom_msg.pose.pose.position.z = 0.0
@@ -149,7 +153,7 @@ if __name__=='__main__':
                     odom_msg.pose.pose.orientation.z = q_steering[2]
                     odom_msg.pose.pose.orientation.w = q_steering[3]
 
-                # Velocidades lineales y angulares
+                # TWIST velocidades: Angular, linear
                     odom_msg.twist.twist.linear.x = (velocity_r + velocity_l) / 2.0
                     odom_msg.twist.twist.angular.z = (velocity_r - velocity_l) / wheel_base
 

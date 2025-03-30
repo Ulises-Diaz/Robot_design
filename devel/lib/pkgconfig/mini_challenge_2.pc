@@ -1,0 +1,8 @@
+prefix=/home/student/catkin_ws/devel
+
+Name: mini_challenge_2
+Description: Description of mini_challenge_2
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
