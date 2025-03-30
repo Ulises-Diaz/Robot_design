@@ -1,0 +1,8 @@
+<launch>
+    <!-- Launch PuzzleBot Gazebo simulation -->
+    <include file="$(find puzzlebot_gazebo)/launch/puzzlebot_gazebo.launch"/>
+
+    <!-- Start your controller node -->
+    <node name="Controlador_puzzlebot" pkg="robot_control" type="challenge.py" output="screen">
+    </node>
+</launch>
