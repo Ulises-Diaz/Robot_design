@@ -1,36 +1,26 @@
 #!/usr/bin/env python3
 import rospy
-import numpy as np
 from std_msgs.msg import Float32
+import numpy as np
 
+def signal_generator():
+    rospy.init_node('signal_generator')
+    signal_pub = rospy.Publisher('/set_point', Float32, queue_size=10)
+    #time_pub = rospy.Publisher('/time', Float32, queue_size=10)
+    rate = rospy.Rate(10)  
 
-if __name__=='__main__':
-    #Initialise and Setup node
-    rospy.init_node("SetPoint_Generator")
-
-    #Declare Variables/Parameters to be used
-    Amplitude = rospy.get_param("~setpoint_Amplitude",8.0)
-    Omega = rospy.get_param("~setpoint_Freq",0.1)
-
-    # Configure the Node
-    rate = rospy.Rate(rospy.get_param("~setpoint_Rate",200))
-
-    #Setup Publishers and Subscribers
-    signal_pub=rospy.Publisher("/set_point",Float32, queue_size=10)
+    t = 0.0
     
-    #Declare initial time
-    init_time = rospy.get_time()
-
     while not rospy.is_shutdown():
-
-        #Get time
-        time = rospy.get_time()-init_time
-        
-        #Define the Set Point
-        signal = Amplitude*np.sin(Omega*time)
-
-        #Publish the Set Point
-        signal_pub.publish(signal)
-
-        #Wait and repeat
+        y = np.sin(t)
+        signal_pub.publish(y)
+        #time_pub.publish(t)
+        rospy.loginfo("Signal: %f, Time: %f", y, t)
+        t += 0.1
         rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        signal_generator()
+    except rospy.ROSInterruptException:
+        pass

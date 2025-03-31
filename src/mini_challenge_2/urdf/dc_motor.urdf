@@ -1,37 +1,58 @@
 <?xml version="1.0"?>
-<robot name="single_link_arm">
-<link name="world">
-</link>
+<robot name="single_link_arm" >
 
-<!-- <link name="Motor">
-        <visual>
-            <origin rpy="0 0.0 0" xyz="0 0 0"/>
-            <geometry>
-                <mesh filename="package://mini_challenge_2/models/motor_STL.stl"/>
-            </geometry>
-        </visual>
-</link> -->
+  <!-- Materiales para visualización -->
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
 
-<link name="Wheel">
-        <visual>
-            <origin rpy="0 0 0" xyz="0 0.0 0"/>
-            <geometry>
-                <mesh filename="package://mini_challenge_2/models/MCR2_1000_1_1_Wheel_Coupler_2.stl"/>
-            </geometry>
-        </visual>
-</link>
+  <material name="red">
+    <color rgba="0.8 0 0 1"/>
+  </material>
 
-<!-- <joint name="joint1" type="fixed">
-    <origin xyz="0 0 1" rpy="0 0 0" />
-    <parent link="world" />
-    <child link="Motor" />
-</joint> -->
+  <link name="world"/>
 
-<joint name="joint2" type="continuous">
-    <origin xyz="0.041475 0 0" rpy="0 0 0" />
-    <parent link="world" />
-    <child link="Wheel" />
-    <axis xyz="1 0 0" />
-</joint>
+  <link name="Motor">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://mini_challenge_2/models/Motor.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Wheel">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://mini_challenge_2/models/Llanta.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint1" type="fixed">
+    <origin xyz="0 0 1" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="Motor"/>
+  </joint>
+
+  <joint name="joint2" type="continuous">
+    <origin xyz="0.041475 0 0" rpy="0 0 0"/>
+    <parent link="Motor"/>
+    <child link="Wheel"/>
+    <axis xyz="1 0 0"/>
+  </joint>
 
 </robot>

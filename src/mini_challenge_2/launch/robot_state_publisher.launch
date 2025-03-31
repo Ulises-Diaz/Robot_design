@@ -15,8 +15,11 @@
   <node name="pid_control" pkg="mini_challenge_2" type="pid_control.py" output="screen" />
 
   <!-- Generador de setpoints (consignas) -->
-  <node name="set_point_generator" pkg="mini_challenge_2" type="set_point_generator.py" output="screen" />
-
+  <node name="set_point_generator" pkg="mini_challenge_2" type="set_point_generator.py" output="screen">
+    <param name="amplitude" value="5.0"/>    <!-- Amplitud aumentada -->
+    <param name="frequency" value="0.2"/>   <!-- Frecuencia aumentada -->
+    <param name="offset" value="1.0"/>      <!-- Offset de 1 metro -->
+  </node>
   <!-- ========== Nodos para TF y robot_states ========== -->
   <!-- Convertir joint_states a TF2 (transformaciones) y publicar estados del robot -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
