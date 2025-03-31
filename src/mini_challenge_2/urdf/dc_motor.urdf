@@ -1,11 +1,9 @@
 <?xml version="1.0"?>
-<robot name="single_link_arm" >
-
+<robot name="single_link_arm">
   <!-- Materiales para visualización -->
   <material name="blue">
     <color rgba="0 0 0.8 1"/>
   </material>
-
   <material name="red">
     <color rgba="0.8 0 0 1"/>
   </material>
@@ -29,16 +27,18 @@
 
   <link name="Wheel">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://mini_challenge_2/models/Llanta.stl" scale="1 1 1"/>
-      </geometry>
-      <material name="red"/>
+    <!-- Orientación con Y hacia arriba y Z como eje de giro -->
+    <origin rpy="-1.570796 0 0" xyz="0 0 0"/> <!-- -90° en X -->
+    <geometry>
+      <mesh filename="package://mini_challenge_2/models/Llanta.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="red"/>
     </visual>
     <collision>
-      <geometry>
-        <cylinder radius="0.1" length="0.05"/>
-      </geometry>
+    <geometry>
+      <cylinder radius="0.1" length="0.05"/>
+    </geometry>
+    <origin rpy="-1.570796 0 0" xyz="0 0 0"/> <!-- Misma orientación para colisión -->
     </collision>
   </link>
 
@@ -48,11 +48,10 @@
     <child link="Motor"/>
   </joint>
 
-  <joint name="joint2" type="continuous">
-    <origin xyz="0.041475 0 0" rpy="0 0 0"/>
-    <parent link="Motor"/>
-    <child link="Wheel"/>
-    <axis xyz="1 0 0"/>
+ <joint name="joint2" type="continuous">
+  <origin xyz="0.041475 0 0" rpy="0 0 0"/>
+  <parent link="Motor"/>
+  <child link="Wheel"/>
+  <axis xyz="0 0 1"/> <!-- Eje Z para giro -->
   </joint>
-
 </robot>
