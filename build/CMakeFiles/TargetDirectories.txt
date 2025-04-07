@@ -106,6 +106,13 @@
 /home/student/catkin_ws/build/mini_challenge_2/CMakeFiles/tf_generate_messages_eus.dir
 /home/student/catkin_ws/build/mini_challenge_2/CMakeFiles/tf2_msgs_generate_messages_cpp.dir
 /home/student/catkin_ws/build/mini_challenge_2/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir
+/home/student/catkin_ws/build/slm_sim/CMakeFiles/install/strip.dir
+/home/student/catkin_ws/build/slm_sim/CMakeFiles/install/local.dir
+/home/student/catkin_ws/build/slm_sim/CMakeFiles/install.dir
+/home/student/catkin_ws/build/slm_sim/CMakeFiles/list_install_components.dir
+/home/student/catkin_ws/build/slm_sim/CMakeFiles/rebuild_cache.dir
+/home/student/catkin_ws/build/slm_sim/CMakeFiles/edit_cache.dir
+/home/student/catkin_ws/build/slm_sim/CMakeFiles/test.dir
 /home/student/catkin_ws/build/dashgo_b1/CMakeFiles/install/strip.dir
 /home/student/catkin_ws/build/dashgo_b1/CMakeFiles/install/local.dir
 /home/student/catkin_ws/build/dashgo_b1/CMakeFiles/install.dir

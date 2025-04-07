@@ -1,18 +1,19 @@
 <launch>
   <!-- Cargar URDF -->
   <param name="robot_description" textfile="$(find mini_challenge_2)/urdf/dc_motor.urdf" />
-  
-  <node name="moto_sim" pkg="mini_challenge_2" type="moto_sim.py" output="screen"/>
 
+  <node name="moto_sim" pkg="mini_challenge_2" type="moto_sim.py" output="screen"/>
   <node name="motor_JointPub" pkg="mini_challenge_2" type="motor_JointPub.py" output="screen"/>
-  
+
   <node name="pid_control" pkg="mini_challenge_2" type="pid_control.py" output="screen"/>
-  
   <node name="set_point_generator" pkg="mini_challenge_2" type="set_point_generator.py" output="screen"/>
 
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
-  
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
+  <node name="rqt_plotter" pkg="rqt_plot" type="rqt_plot" 
+      args="/set_point/data /motor_output/data /motor_input/data" 
+      output="screen"/>
+
+  <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph"/>
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mini_challenge_2)/config/wheel_config.rviz" required="true"/>
 </launch>

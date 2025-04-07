@@ -1,0 +1,5 @@
+<multiplot>
+  <plot title="Joint States">
+    <axis x="joint_states/position[0]" y="joint_states/velocity[0]"/>
+  </plot>
+</multiplot>

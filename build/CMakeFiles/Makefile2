@@ -57,6 +57,7 @@ all: gtest/all
 all: basic_comms/all
 all: courseworks/all
 all: mini_challenge_2/all
+all: slm_sim/all
 all: dashgo_b1/all
 all: makers/all
 all: motor_sim/all
@@ -73,6 +74,7 @@ preinstall: gtest/preinstall
 preinstall: basic_comms/preinstall
 preinstall: courseworks/preinstall
 preinstall: mini_challenge_2/preinstall
+preinstall: slm_sim/preinstall
 preinstall: dashgo_b1/preinstall
 preinstall: makers/preinstall
 preinstall: motor_sim/preinstall
@@ -94,6 +96,7 @@ clean: gtest/clean
 clean: basic_comms/clean
 clean: courseworks/clean
 clean: mini_challenge_2/clean
+clean: slm_sim/clean
 clean: dashgo_b1/clean
 clean: makers/clean
 clean: motor_sim/clean
@@ -452,6 +455,24 @@ simple_mobile_robot/preinstall:
 simple_mobile_robot/clean:
 
 .PHONY : simple_mobile_robot/clean
+
+#=============================================================================
+# Directory level rules for directory slm_sim
+
+# Recursive "all" directory target.
+slm_sim/all:
+
+.PHONY : slm_sim/all
+
+# Recursive "preinstall" directory target.
+slm_sim/preinstall:
+
+.PHONY : slm_sim/preinstall
+
+# Recursive "clean" directory target.
+slm_sim/clean:
+
+.PHONY : slm_sim/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir

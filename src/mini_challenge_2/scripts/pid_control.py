@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import rospy
-import math
+import numpy as np
 from std_msgs.msg import Float32
 
 # Variables globales
@@ -26,10 +26,10 @@ def set_point_callback(msg):
     set_point = msg.data
 
 def wrap_to_pi(theta):
-    result = math.fmod((theta + math.pi), (2 * math.pi))
+    result = np.fmod((theta + np.pi), (2 * np.pi))
     if result < 0:
-        result += 2 * math.pi
-    return result - math.pi
+        result += 2 * np.pi
+    return result - np.pi
 
 def compute_discrete_pid():
     global error_sum, previous_error, error_samples, k
@@ -76,25 +76,19 @@ def init_pid():
     pid_rate = rospy.get_param("~pid_rate", 100)
     Ts = 1.0 / pid_rate
     
-    # Setup publishers and subscribers
+    # publishers and subscribers
     motor_input_pub = rospy.Publisher("/motor_input", Float32, queue_size=10)
     rospy.Subscriber("/motor_output", Float32, motor_output_callback)
     rospy.Subscriber("/set_point", Float32, set_point_callback)
-    
-    rospy.loginfo("Discrete PID Controller initialized with:")
-    rospy.loginfo(f"Kp={Kp}, Ki={Ki}, Kd={Kd}")
-    rospy.loginfo(f"Sampling rate: {pid_rate}Hz (Ts={Ts:.4f}s)")
+
 
 def run_pid():
     rate = rospy.Rate(pid_rate)
     while not rospy.is_shutdown():
-        # Calculate control signal
         control_signal = compute_discrete_pid()
         
-        # Publish control signal
         motor_input_pub.publish(Float32(control_signal))
         
-        # Wait according to configured frequency
         rate.sleep()
 
 if __name__ == '__main__':
