@@ -117,9 +117,9 @@ if __name__=='__main__':
                             ])
                 
                 G = gravity * np.array([
-    m1*a*c1 + M1*l1*c1 + m2*l1*c1 + m2*d*c12 + M2*l1*c1 + M2*l2*c12,
-    (m2*d + M2*l2) * c12
-])
+                                        m1*a*c1 + M1*l1*c1 + m2*l1*c1 + m2*d*c12 + M2*l1*c1 + M2*l2*c12,
+                                        (m2*d + M2*l2) * c12
+                                        ])
                 
                 tau_vector = np.array([tau1, tau2])
                 q_dot = np.array([q1_dot,q2_dot])
@@ -139,6 +139,9 @@ if __name__=='__main__':
                 # Act pos
                 q1 = q1 + q1_dot *dt
                 q2 = q2 + q2_dot *dt
+
+                q1 = wrap_to_Pi(q1)
+                q2 = wrap_to_Pi(q2)
 
                 #Configure joints
                 robotJoints.header.stamp = rospy.Time.now()
