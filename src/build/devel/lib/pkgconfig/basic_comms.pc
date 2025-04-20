@@ -1,8 +1,0 @@
-prefix=/home/student/catkin_ws/src/build/devel
-
-Name: basic_comms
-Description: Description of basic_comms
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

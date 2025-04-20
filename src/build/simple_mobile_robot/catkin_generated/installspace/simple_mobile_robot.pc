@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: simple_mobile_robot
-Description: Description of simple_mobile_robot
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

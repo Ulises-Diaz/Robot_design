@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: puzzlebot_gazebo
-Description: Description of puzzlebot_gazebo
-Version: 1.1.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

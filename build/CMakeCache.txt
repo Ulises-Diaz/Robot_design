@@ -528,7 +528,7 @@ kdl_parser_DIR:PATH=/opt/ros/noetic/share/kdl_parser/cmake
 laser_geometry_DIR:PATH=/opt/ros/noetic/share/laser_geometry/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/libtransmission_interface_loader_plugins.so
+lib:FILEPATH=/opt/ros/noetic/lib/libtf.so
 
 //Value Computed by CMake
 makers_BINARY_DIR:STATIC=/home/student/catkin_ws/build/makers
@@ -637,6 +637,12 @@ rviz_DIR:PATH=/opt/ros/noetic/share/rviz/cmake
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
+
+//Value Computed by CMake
+simple_manipulator_BINARY_DIR:STATIC=/home/student/catkin_ws/build/simple_manipulator
+
+//Value Computed by CMake
+simple_manipulator_SOURCE_DIR:STATIC=/home/student/catkin_ws/src/simple_manipulator
 
 //Value Computed by CMake
 simple_mobile_robot_BINARY_DIR:STATIC=/home/student/catkin_ws/build/simple_mobile_robot
@@ -843,7 +849,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

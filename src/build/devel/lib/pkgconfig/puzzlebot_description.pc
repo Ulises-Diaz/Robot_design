@@ -1,8 +1,0 @@
-prefix=/home/student/catkin_ws/src/build/devel
-
-Name: puzzlebot_description
-Description: Description of puzzlebot_description
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

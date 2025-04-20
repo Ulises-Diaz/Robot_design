@@ -1,8 +1,0 @@
-prefix=/home/student/catkin_ws/src/build/devel
-
-Name: courseworks
-Description: Description of courseworks
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
