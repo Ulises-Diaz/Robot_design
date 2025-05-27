@@ -1,7 +1,7 @@
 import cv2 
 import numpy as np
 
-image = cv2.imread(r"C:\Users\ivand\OneDrive\Escritorio\FRED\Photo-1 (1).jpeg")
+image = cv2.imread(r"C:\Users\ivand\OneDrive\Escritorio\FRED\FRED_VISION\Screenshot 2025-05-26 170846.png")
 
 roi = cv2.selectROI("select the area", image)
 cropped_image = image[int(roi[1]):int(roi[1]+roi[3]), 
