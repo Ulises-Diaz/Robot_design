@@ -46,6 +46,16 @@ catkin_make
 source devel/setup.bash
 ```
 
+## Dual Link Manipulator 
+```bash
+roslaunch dlm_sim dlm.launch
+```
+
+## Single Link Manipulator
+```bash
+roslaunch slm_sim pendulum_sim.launch
+```
+
 ## FRED VISION 
 
 
