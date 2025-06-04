@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<launch>
+
+    <node name= "tf1" pkg="tf2_ros" type="static_transform_publisher" args="0 1 2 3.1416 0 0 sun planet"/>
+    <node name= "tf2" pkg="tf2_ros" type="static_transform_publisher" args="5 3 2 3.1416 0 0 planet planet2"/>
+
+    <node name= "rviz" pkg="rviz" type="rviz"/>
+
+
+
+</launch>
